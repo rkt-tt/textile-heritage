@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f5f0;
+    color: #333;
+}
+ .main {
+    display: flex;
+    width: 100%;
+    min-height: 80vh;
+}
+    
+    .map-header {
+    text-align: center;
+    margin: 30px 0 20px 0;
+}
+
+.map-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #4a2f1f;
+}
+
+.map-header p {
+    margin-top: 8px;
+    font-size: 15px;
+    color: #6b4a2f;
+    font-style: italic;
+}
+
+.left-panel {
+    flex: 1;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.left-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.right-panel {
+    flex: 1;
+    padding: 30px;
+    background: #f8f5f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+.messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    border: none;
+    background: #5a3e2b;
+    color: white;
+    cursor: pointer;
+}
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background: #fff;
+    color: white;
+}
+
+/* LOGOS */
+.logo-area {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.logo-area img {
+    height: 80px;
+}
+
+/* NAVBAR */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+/* PARENT LI */
+.navbar ul li {
+    position: relative;
+    padding: 10px 0;   /* increases hover area */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    margin-right: 100px;
+}
+
+/* SUBMENU */
+.navbar ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;        /* attach directly below parent */
+    left: 0;
+    background: #7b5b44;
+    padding: 10px 0;
+    min-width: 220px;
+    border-radius: 5px;
+}
+
+/* OPTIONAL: smoother hover area */
+.navbar ul li ul li {
+    padding: 10px 15px;
+}
+.navbar ul li ul li a {
+    color: white;
+}
+
+/* SHOW DROPDOWN */
+.navbar ul li:hover ul {
+    display: block;
+}
+
+    .navbar ul li::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 10px;   /* bridge area */
+}
+
+/* ================= HEADER 2 ================= */
+.header2 {
+    text-align: center;
+    padding: 40px 20px;
+    background: #d9c5a1;
+}
+
+.header2 h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #4a2f1f;
+}
+
+.header2 p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+
+.main {
+    padding: 40px;
+    text-align: center;
+}
+
+.main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+.footer {
+    background: #5a3e2b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+@media(max-width: 768px) {
+
+    .header1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li ul {
+        position: static;
+    }
+
+}
+
+
+@media(max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+}    
