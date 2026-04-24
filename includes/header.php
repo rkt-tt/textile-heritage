@@ -6,7 +6,7 @@
 <title>Textile Heritage</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=<?= time() ?>">
 
 <style>
 
@@ -47,7 +47,8 @@ min-width: 0;
 display: flex;
 align-items: center;
 gap: 10px;
-flex: 2;
+flex: 2;  
+min-width:0;
 }
 
 .header2-logo img {
@@ -62,6 +63,9 @@ line-height: 1.2;
 word-break: break-word;
 text-align: center;    
 }
+.header2-text {
+    max-width: 400px;   /* 🔥 VERY IMPORTANT */
+}
 
 .header2-text h4 {
 font-size: 14px;
@@ -70,19 +74,23 @@ margin: 0;
 
 /* CENTER (NAVBAR) */
 .header-center {
-flex: 1;
-display: flex;
-justify-content: center;
+    flex: 3;              
+    display: flex;
+    justify-content: center;
+    min-width: 0;
 }
 
 .navbar {
-display: flex;
-gap: 15px;
-flex-wrap: wrap;
-justify-content: center;
-background: #e8f2fb;
-padding: 8px 15px;
-border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: nowrap;    
+    white-space: nowrap;
+
+    width: 100%;
 }
 
 .navbar a {
@@ -280,6 +288,8 @@ MOBILE (<=768px)
                     ?>
                 </div>
             </div>
+
+            <a href="identify.php" class="identify-nav-link">Identify Your Design</a>
 
         </div>
     </div>

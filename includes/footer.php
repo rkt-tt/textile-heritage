@@ -1,10 +1,5 @@
-<html lang="en">
-    <head>
-    <title></title></head>
-    <body>
 <div class="footer">
     <div class="footer-container">
-
         <!-- LEFT -->
         <div class="footer-left">
             <h3>Indian Textile Heritage</h3>
@@ -23,7 +18,6 @@
             <h4>Follow Us</h4>
             <p>Facebook | Instagram | YouTube</p>
         </div>
-
     </div>
 
     <!-- BOTTOM STRIP -->
@@ -36,9 +30,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function(){
-
     const svg = document.querySelector("svg");
-
     if(svg){
         svgPanZoom(svg, {
             zoomEnabled: true,
@@ -49,21 +41,17 @@ document.addEventListener("DOMContentLoaded", function(){
             maxZoom: 10
         });
     }
-
 });
 </script>
 <script>
 window.addEventListener("scroll", function() {
     const header = document.querySelector(".header2");
-
-    if (window.scrollY > 10) {
+    if (header && window.scrollY > 10) {
         header.classList.add("scrolled");
-    } else {
+    } else if (header) {
         header.classList.remove("scrolled");
     }
 });
 </script>        
-        
-        
-    </body>
+</body>
 </html>

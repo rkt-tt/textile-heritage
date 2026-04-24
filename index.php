@@ -66,9 +66,8 @@ $page = $_GET["page"] ?? "";
     <!-- RIGHT (20%) -->
     <div class="right-column">
 
-        <div class="chat-box">
-            <h4>Chat Support</h4>
-            <p>Coming soon...</p>
+        <div class="chat-box" style="display: flex;">
+            <?php include_once "includes/chatbot.php"; ?>
         </div>
 
     </div>
@@ -81,16 +80,10 @@ $page = $_GET["page"] ?? "";
     } else {
         echo "<p style='color:red;'>Map file missing</p>";
     } */
-    ?>
-    </div> 
-<?
-<?php
-}
-?>
+    } ?>
 </div>
 
 <?php
-
 /* =========================
    STATE LINKS (OPTIONAL)
 ========================= */ 
@@ -145,4 +138,5 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 </script>
+</div> <!-- Closing content-area -->
 <?php require_once __DIR__ . "/includes/footer.php"; ?>
