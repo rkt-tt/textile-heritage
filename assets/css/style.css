@@ -1,0 +1,1101 @@
+/* ===== FORCE EDGE-TO-EDGE LAYOUT ===== */
+
+/* Remove browser default spacing */
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove all container restrictions */
+.container,
+.content-area,
+.main-layout,
+.hero-section {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Ensure layout spans full width */
+.main-layout {
+    display: flex;
+    width: 100vw;
+}
+
+/* Columns */
+.left-column,
+.right-column {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure full height */
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+        url('../images/textile-pattern.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/* HEADER */
+.header1 {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    /* keeps it above all content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 10px 50px;
+    border-bottom: 4px solid #b38b59;
+}
+
+/* optional: slight shadow when scrolling */
+.header1 {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-section {
+    display: flex;
+    align-items: right;
+    gap: 1px;
+    /* space between logos */
+    margin-left: auto;
+}
+
+.logo-section img {
+    height: 80px;
+}
+
+/*
+.logo-section img {
+    height: 80px;
+    margin-right: 10px;
+} */
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+    /* slightly tighter */
+    flex-wrap: nowrap;
+
+    white-space: nowrap;
+
+    width: 100%;
+}
+
+.navbar a {
+    color: #1f3b57;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    background: #2c5d8a;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.identify-nav-link {
+    font-weight: 700 !important;
+    color: #b38b59 !important;
+    border: 1.5px solid #b38b59;
+    padding: 8px 20px !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    /* Space from other tabs */
+}
+
+.identify-nav-link:hover {
+    background: #b38b59 !important;
+    color: #fff !important;
+}
+
+/*
+.navbar a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 14px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: #b38b59;
+    color: #fff;
+    border-radius: 4px;
+}  */
+
+/* ===== FIX DROPDOWN VISIBILITY ===== */
+
+.dropdown-content {
+    display: none !important;
+    /* hidden by default */
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 800px;
+    max-width: 90vw;
+
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+
+    gap: 8px;
+
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+
+}
+
+.dropdown:hover .dropdown-content {
+
+    opacity: 1;
+    visibility: visible;
+}
+
+/* CONTENT */
+.content-area {
+    
+    max-width: 900px;   
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+
+    background: rgba(255,255,255,0.96);
+    border-radius: 10px;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    box-sizing: border-box;
+}
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.dropdown-content img {
+    width: auto !important;
+}
+
+.content-area ul {
+    padding-left: 40px !important;
+}
+
+.content-area h1,
+.content-area h2,
+.content-area h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222;
+    text-align: justify;
+}
+
+/*
+.content-area h2 {
+    margin-top: 20px;
+    border-bottom: 2px solid #b38b59;
+    padding-bottom: 5px;
+} */
+
+/* PARAGRAPHS */
+.content-area p {
+    margin-bottom: 12px;
+    color: #444;
+    letter-spacing: 0.3px;
+}
+
+.content-block p[style] {
+    text-align: justify !important;
+}
+
+/* LISTS */
+.content-area ul {
+    text-align: justify;
+    margin-bottom: 14px;
+    padding-left: 20px;
+}
+
+.content-area li {
+    margin-bottom: 6px;
+}
+
+/* STATES */
+.state-box {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 5px;
+    background: #eee;
+}
+
+.state-box:hover {
+    background: #b38b59;
+    color: #fff;
+}
+
+/* DASHBOARD */
+.dashboard {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.dashboard a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 18px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dashboard a:hover {
+    background: #b38b59;
+    color: #fff;
+}
+
+
+
+/* Center image inside container */
+.container img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+/* FIX DROPDOWN IMAGES 
+.dropdown-content img {
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    object-fit: unset !important;
+}*/
+
+.dropdown-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* FIX PRODUCT IMAGES */
+.content-area img {
+    width: 300px;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.content-block img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    display: block;
+}
+
+/* Hide only heading that is exactly "Image" */
+h2 {
+    visibility: visible;
+}
+
+h2:where(:contains("Image")) {
+    display: none;
+}
+
+.content-block + h2 {
+    display: block;
+}
+
+.content-block {
+    font-family: 'Poppins', sans-serif;
+}
+
+.content-block p:has(img) {
+    text-align: center;
+}
+
+/* ================= SVG MAP ================= */
+svg {
+    width: 100%;
+    max-width: 900px;
+}
+
+svg path {
+    fill: #e6e6e6;
+    stroke: #fff;
+    stroke-width: 1;
+    transition: 0.3s;
+}
+
+svg path:hover {
+    fill: #b38b59;
+}
+
+svg {
+    shape-rendering: geometricPrecision;
+}
+
+svg path {
+    vector-effect: non-scaling-stroke;
+}
+
+/* MAIN LAYOUT (FULL WIDTH) */
+.main-layout {
+    display: flex;
+    width: 100%;
+
+}
+
+/* REMOVE SIDE SPACE FROM COLUMNS */
+.left-column,
+.right-column {
+    margin: 0;
+    padding: 0;
+}
+
+/* LEFT COLUMN ALIGNMENT */
+.left-column {
+    background: #fff;
+    text-align: left;
+    flex: 0 0 60%;
+}
+
+/* CENTER ONLY THE TITLE */
+.map-title {
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+/* OPTIONAL: better spacing */
+.map-title h2 {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.map-title p {
+    margin-bottom: 15px;
+}
+
+/* MAP TITLE */
+
+/* RIGHT SIDE (25%) */
+.right-column {
+    flex: 0 0 40%;
+    background: #f5efe6;
+    overflow: hidden;
+}
+
+
+/* CHAT BOX PANEL */
+.chat-box {
+    background: #f5efe6;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    height: calc(100% - 30px);
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TITLE */
+.chat-box h4 {
+    margin-bottom: 10px;
+    color: #6b1d1d;
+}
+
+/* TEXT */
+.chat-box p {
+    color: #555;
+}
+
+/* MAP IMAGE */
+
+.hero-section svg {
+    display: block;
+    margin-left: 0;
+    /* left align */
+    margin-right: auto;
+    width: 100%;
+    max-width: none;
+}
+
+.hero-section {
+    padding: 0 0 40px 0;
+    text-align: left !important;
+    width: 100%;
+    min-height: calc(100vh - 140px);
+    /* adjust header height */
+    height: auto;
+    overflow: hidden;
+}
+
+.hero-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* or 'cover' if you want full fill */
+}
+
+/* FOOTER FULL WIDTH */
+.footer {
+    margin-top: auto;
+    border-top: 3px solid #b38b59;
+    background: linear-gradient(to right, #1a1a1a, #2b2b2b);
+    color: #f1f1f1;
+    width: 100%;
+    /* Changed from 100vw */
+    position: relative;
+    z-index: 10;
+}
+
+/* INNER CONTAINER */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+/* SECTIONS */
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+}
+
+/* HEADINGS */
+.footer p {
+    color: #bbb;
+}
+
+.footer h3,
+.footer h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* TEXT */
+.footer p {
+    margin: 5px 0;
+    color: #ddd;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background: #111;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.dropdown-content img {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    display: block;
+}
+
+.content-area img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+.header-center {
+    flex: 2;
+    /* more space for navbar */
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+}
+.content-block {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.content-block {
+    text-align: justify;
+}
+
+.content-block p {
+    text-align: justify;
+}
+
+
+.content-block .ql-align-left,
+.content-block .ql-align-center,
+.content-block .ql-align-right {
+    text-align: justify !important;
+}
+
+/* FORCE QUILL CONTENT TO JUSTIFY */
+.content-block .ql-align-left,
+.content-block .ql-align-center,
+.content-block .ql-align-right {
+    text-align: justify !important;
+}
+
+/* ===== QUILL CONTENT RESET ===== */
+.content-block {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* HEADINGS */
+.content-block h1,
+.content-block h2,
+.content-block h3 {
+    font-family: 'Playfair Display', serif;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* ALIGNMENT (FORCE CONSISTENCY) */
+.content-block .ql-align-center {
+    text-align: center;
+}
+
+.content-block .ql-align-right {
+    text-align: right;
+}
+
+.content-block .ql-align-justify {
+    text-align: justify;
+}
+
+/* FONT SIZES */
+.content-block .ql-size-small {
+    font-size: 12px;
+}
+
+.content-block .ql-size-large {
+    font-size: 18px;
+}
+
+.content-block .ql-size-huge {
+    font-size: 22px;
+}
+
+/* FONTS */
+.content-block .ql-font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.content-block .ql-font-monospace {
+    font-family: monospace;
+}
+
+/* LINKS */
+.content-block a {
+    color: #b38b59;
+    text-decoration: none;
+}
+
+.content-block a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .left-column,
+    .right-column {
+        flex: 100%;
+    }
+
+    .chat-box {
+        position: static;
+    }
+
+    .header1 {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .header2-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header2-text {
+        text-align: center;
+    }
+}
+
+/*
+.left-column { border: 2px solid red; }
+.right-column { border: 2px solid blue; }
+
+
+* {
+    outline: 1px solid red;
+} */
+
+.main-layout {
+    width: 100%;
+    padding: 0 10px;
+}
+
+/* =========================
+FINAL DROPDOWN + CONTENT FIX
+(OVERRIDES OLD CONFLICTS)
+========================= */
+
+/* FIX MAIN LAYOUT WIDTH ISSUE */
+.main-layout {
+    width: 100% !important;
+    /* remove 100vw overflow issue */
+}
+
+/* =========================
+DROPDOWN (STABLE + RESPONSIVE)
+========================= */
+
+.dropdown-content {
+    display: none !important;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 800px;
+    max-width: 90vw;
+
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+
+    gap: 8px;
+
+    overflow: hidden;
+    z-index: 9999;
+
+
+}
+
+
+/* FIX TEXT WRAPPING */
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+
+    white-space: normal !important;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+
+}
+/* =========================
+PRODUCT DISCLAIMER
+========================= */
+
+.product-disclaimer {
+    max-width: 950px;
+    margin: 40px auto 20px;
+
+    padding: 15px 18px;
+
+    background: #f9f6f1;
+    border-left: 4px solid #b38b59;
+
+    font-size: 13px;
+    opacity: 0.9;
+    line-height: 1.6;
+    color: #555;
+
+    border-radius: 6px;
+}
+.product-disclaimer::before {
+    content: "⚠ ";
+    font-weight: bold;
+}
+
+.content-block {
+    margin-bottom: 20px;
+	max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================
+COMMON ARTICLE SYSTEM
+(Product + CoE)
+========================= */
+
+.article-content {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    color: #333;
+	
+}
+
+/* HEADINGS */
+.content-area h2,
+.article-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 600;
+
+    margin-top: 35px;
+    margin-bottom: 15px;
+
+    color: #1f3b57;
+
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* UNDERLINE */
+.article-page h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #b38b59;
+    margin-top: 6px;
+}
+
+/* PARAGRAPH */
+.article-content p {
+	max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    margin-bottom: 12px;
+}
+
+/* LISTS */
+.article-content ul {
+    text-align: justify;
+    padding-left: 20px;
+}
+
+.article-content li {
+    margin-bottom: 6px;
+}
+
+/* =========================
+CONTENT AREA (WIDER + CLEAN)
+========================= */
+
+.content-area {
+    max-width: 850px;
+    width: 95% !important;
+    margin: 20px auto !important;
+
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 30px;
+}
+.content-area p, li {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content-area h2 {
+	margin-left: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+.content-area h3 {
+    font-size: 20px;
+    color: #444;
+}
+.content-area h2:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+@media (max-width: 768px) {
+    .content-area {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+/* =========================
+REMOVE DROPDOWN IMAGE CONFLICTS
+========================= */
+
+.dropdown-content img {
+    display: none !important;
+    /* you are not using images */
+}
+
+/* =========================
+SAFETY: PREVENT PAGE OVERFLOW
+========================= */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* =========================
+CLEAN RESET FIX (STABLE)
+========================= */
+
+/* FIX DROPDOWN (SIMPLE + WORKING) */
+.dropdown-content {
+    display: none;
+    /* hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* 🔥 align under menu (no centering issues) */
+
+    width: 300px;
+    /* 🔥 keep simple first */
+    max-width: 90vw;
+
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    z-index: 9999;
+
+}
+
+/* SHOW ON HOVER */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* FIX TEXT WRAP */
+.dropdown-content a {
+    display: block;
+    padding: 8px 10px;
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* =========================
+FIX MAP SIZE (RESTORE)
+========================= */
+
+.hero-section {
+    width: 100%;
+    height: auto;
+    /* 🔥 remove forced height */
+    min-height: auto;
+    overflow: visible;
+}
+
+.hero-section svg {
+    width: 100%;
+    height: auto;
+    /* 🔥 prevent shrinking */
+    max-width: 100%;
+}
+
+/* =========================
+FIX LAYOUT OVERFLOW
+========================= */
+
+.main-layout {
+    width: 100% !important;
+    /* remove 100vw issue */
+}
+
+/* REMOVE HIDDEN OVERFLOW ISSUES */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* FORCE DROPDOWN TO NORMAL LIST */
+.dropdown-content {
+    display: none;
+    width: 300px;
+
+}
+
+/* SHOW ON HOVER */
+.dropdown:hover .dropdown-content {
+    display: block !important;
+}
+
+/* =========================
+FOOTER MENU
+========================= */
+/* =========================
+FOOTER 4-COLUMN LAYOUT
+========================= */
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+/* Each column */
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+/* Headings */
+.footer-col h3,
+.footer-col h4, ul{
+	text-align: Center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Text */
+.footer-col p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+	text-align:center;
+}
+
+/* Lists */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+/* Links */
+.footer-col a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: #b38b59;
+}
+
+/* Bottom bar */
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background: #111;
+    color: #ccc;
+    font-size: 14px;
+}
+.ql-editor {
+    display: block;
+    width: 100%;
+}
+
+/* =========================
+FIX CONTENT TEXT COLOR
+========================= */
+
+.content-block,
+.content-block p,
+.content-block span,
+.content-block div,
+.content-block li {
+    color: #333 !important;   /* 🔥 force readable dark text */
+}
+
+.content-area .content-block {
+    color: #333;
+}
+
+.map-title h2::after {
+    display: none !important;
+}
+.article-page .content-block {
+    max-width: 850px;       /* controlled readable width */
+    margin-left: auto;
+    margin-right: auto;
+}
+.article-page h2 {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sustainability Images */
+.img-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.article-img {
+    width: 48%;
+    border-radius: 8px;
+}
+
+
+
+.article-img:hover {
+    transform: scale(1.25);
+}

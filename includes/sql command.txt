@@ -1,0 +1,33 @@
+/* Link Product to state */
+
+UPDATE product_pages 
+SET state_id = 8 
+WHERE page_key = 'phulkari';
+
+/* verify Table */
+
+SELECT page_key, state_id 
+FROM product_pages 
+WHERE state_id = 8;
+
+/* Expected */
+
+phulkari | 8
+
+/* Ensure state.php */
+
+SELECT DISTINCT p.product_name, p.product_key
+FROM products p
+JOIN product_pages pp ON p.product_key = pp.page_key
+WHERE pp.state_id = ?
+
+/* Flow Dagram */
+Menu → Punjab
+   ↓
+state.php?state_id=8
+   ↓
+DB fetch (state_id = 8)
+   ↓
+Product: Phulkari
+   ↓
+Display ✔
